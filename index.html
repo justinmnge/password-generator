@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="hero-container">
+                <h1 id="hero">GENERATE A<span class="highlight">RANDOM PASSWORD</span></h1>
+                <p id="supp-text">Never use an insecure password again.</p>
+            </div>
+            <div id="btn-container">
+                <button id="btn1" onclick="password()">Generate passwords</button>
+                <button id="btn2" class="active" onclick="toggleSymbols()">Symbols</button>
+                <button id="btn3" class="active" onclick="toggleNumbers()">Numbers</button>
+            </div>
+            <hr class="horizontal-line"></hr>
+            <div id="pw-container" onclick="copyPw()">
+                <p id="pw1"></p>
+                <p id="pw2"></p>
+            </div>
+                <button id="light-mode" onclick="toggleLight()"></button>
+                <div class="vertical-line"></div>
+                <button id="dark-mode" onclick="toggleDark()"></button>
+            </div>
+        </div>
+        <div class="footer">
+            <h4>TO RESET, REFRESH THE PAGE!</h4>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

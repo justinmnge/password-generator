@@ -1,0 +1,270 @@
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.electrolize-regular {
+  font-family: "Electrolize", sans-serif;
+  font-style: normal;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #1C1C1C;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    
+    width: 80%;
+    min-width: 650px;
+    max-width: 650px;
+    aspect-ratio: 16 / 9;
+    
+    background-image: url('images/dark-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+#light-mode, #dark-mode, .vertical-line {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    
+    position: absolute;
+    top: calc(100% + 15px);
+}
+
+#dark-mode {
+    transform: scale(1.2);
+}
+
+#light-mode:hover, #dark-mode:hover {
+    transform: scale(1.6);
+}
+
+#light-mode {
+    background-image: url('images/sun.png');
+    right: 60px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 30px;
+    border: 1px solid #DAD9D7;
+    border-color: #DAD9D7;
+    background-color: #DAD9D7;
+    border-radius: 20px;
+    opacity: 0.1;
+    
+    right: 54px;
+    top: calc(100% + 25px);
+}
+
+#dark-mode {
+    background-image: url('images/moon.png');
+    right: 0px;
+}
+
+#light-mode:focus, #dark-mode:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.container.light-mode {
+    background-image: url('images/light-background.png');
+    border: 3px solid black;
+}
+
+.container.light-mode h1, .container.light-mode #supp-text {
+    color: black;
+    text-shadow: 0 0 1px black;
+}
+
+.container.light-mode h1 .highlight {
+    color: orangered;
+    text-shadow: 0 0 2px black;
+}
+
+.container.light-mode #hero {
+    text-shadow: 0 0 1px white;
+}
+
+
+.container.light-mode .horizontal-line {
+    border: 2px solid #EBEBEA;
+    border-color: #EBEBEA;
+    background-color: #EBEBEA;
+    border-radius: 24px;
+    box-shadow: 0 0 1px #EBEBEA;
+}
+
+.container.light-mode #pw1,
+.container.light-mode #pw2 {
+    background-color: #EBEBEA;
+    border-color: #EBEBEA;
+    border-radius: 6px;
+    color: black;
+    box-shadow: 0 0 5px white;
+}
+
+#hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 500px;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Electrolize', sans-serif;
+    text-shadow: 0 0 10px black;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1em;
+    margin-bottom: 5px;
+}
+
+h1 .highlight {
+    color: orange;
+}
+
+#supp-text {
+    margin-top: 2px;
+    align-self: flex-start;
+    font-family: "Karla", sans-serif;
+    color: #E3E3E3;
+}
+
+#btn-container {
+    display: block;
+    margin: 10px auto;
+}
+
+#btn1, #btn2, #btn3 {
+    background-color: #32C356;
+    border: 1px solid black;
+    color: white;
+    padding: 0.5em 1.6em;
+    border-radius: 6px;
+    font-family: 'Karla';
+    cursor: pointer;
+    box-shadow: 0 0 5px black;
+    transition: background-color 0.2s;
+}
+
+#btn2, #btn3 {
+    background-color: red;
+}
+
+#btn1:focus, #btn2:focus, #btn3:focus {
+    outline: none;
+}
+
+#btn2.active, #btn3.active {
+    background-color: #32C356;
+}
+
+#btn1 {
+    margin-right: 35px;
+}
+
+
+.container.light-mode #btn1 {
+    background-color: #FF8D28;
+    border: 1px solid #FF8D28;
+    color: black;
+}
+
+.container.light-mode #btn2.active, 
+.container.light-mode #btn3.active {
+    background-color: #FF8D28;
+    border: 1px solid #FF8D28;
+    color: black;
+}
+#btn2, #btn3 {
+    margin: 5px;
+}
+
+.horizontal-line {
+    width: 500px;
+    height: 1px;
+    margin: 20px 0;
+    border: 2px solid #273549;
+    border-color: #273549;
+    background-color: #273549;
+    border-radius: 24px;
+    box-shadow: 0 0 1px black;
+}
+
+#pw-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#pw1, #pw2 {
+    padding: 10px 35px;
+    background-color: #273549;
+    border-color: #273549;
+    border-radius: 6px;
+    color: #32C356;
+    min-height: 40px;
+    box-sizing: border-box;
+    width: 225px;
+ 
+    overflow: hidden;
+    box-shadow: 0 0 5px black;
+}
+
+#mode-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1px;
+    position: absolute;
+    bottom: 1px;
+    right: 10px;
+}
+
+h4 {
+    font-family: 'Electrolyze', sans-serif;
+    color: #DAD9D7;
+    letter-spacing: 0.09em;
+    text-shadow: 0 0 2px black
+}
