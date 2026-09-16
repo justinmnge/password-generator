@@ -122,6 +122,7 @@ function password() {
     generatePassword1 += availableCharacters[randomIndex1];
   }
   password1.textContent = generatePassword1;
+  ((password1.style.fontFamily = "Karla"), sans - serif);
 
   // PASSWORD 2
   let generatePassword2 = "";
@@ -131,6 +132,7 @@ function password() {
     generatePassword2 += availableCharacters[randomIndex2];
   }
   password2.textContent = generatePassword2;
+  ((password2.style.fontFamily = "Karla"), sans - serif);
 }
 
 function toggleSymbols() {
